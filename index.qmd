@@ -1,0 +1,115 @@
+---
+author: "Nikita Mozgunov"
+date: "22-05-2024"
+engine: knitr
+format:
+  revealjs:
+    incremental: true
+    slide-number: true
+    logo: MRC_BSU_Cambridge_RGB.svg
+    css: logo.css
+    theme: [custom.scss]
+webr: 
+  show-startup-message: false
+  packages: ['MAMS']
+  autoload-packages: TRUE      
+filters:
+  - webr
+---
+# Creating user-friendly documentation to support software developement {background-image=bg.png background-size="100%"}
+</br></br>
+<span class="grey_text">Nikita Mozgunov</span>
+
+
+## Who is a statistical programmer?
+
+
+<br></br>
+<h4>Key Responsibilities</h4>
+
+- Writing efficient and reproducible R scripts.
+- Developing and maintaining packages.
+- Collaboration (Working closely with biostatisticians, researchers).
+- Creating ShinyApps to present results.
+- Knowledge Dissemination (Sharing findings through presentations, publications, and workshops).
+
+## Goals
+
+- Current developement<span class="parenthetical"> bringing new functionality.</span>
+- Create web-documentation <span class="parenthetical"> using pkgdown.</span>
+- New approach <span class="parenthetical"> in mastering MAMS R package for end-users.</span>
+
+## pkgdown
+
+The <span class="parenthetical">pkgdown</span> generates a static website from an R package's documentation, making it easier to share and navigate the package's information and resources.</br>
+<span class="parenthetical">pkgdown</span> logic:</br>
+
+![](pkgdown_logic.png){fig-align="center"}
+
+## MAMS package documentation 
+
+::: {.iframe-container}
+<iframe src="https://tjaki.github.io/MAMS/" style="width: 95%; height: 100%; border: none;"></iframe>
+:::
+
+## Plotly 
+![](CLT.mp4){.absolute left="0" top="50" height="85%" loop="true" autoplay="true"}
+
+## webR
+
+```{webr-r}
+a <- rnorm(50)
+a
+```
+## About webR ![](webR.png){width=5%}{fig-align="right"}
+
+
+WebR is a version of <span class="h">R interpreter </span>
+
+. . .
+
+WebR’s core is based around compiling the open-source R interpreter for <span class="h">WebAssembly</span>
+
+. . .
+
+WebAssembly is a type of code that  <span class="h">can be run in modern web browsers</span> — it is a low-level assembly-like language.
+
+. . .
+
+WebAssembly provides <span class="h">a way to run code on the web</span> with client apps running on the web <span class="h">that previously couldn't have done so.</span>
+
+## webR pros and limitations
+
+<div class="fragment" data-fragment-index="1">
+#### Pros
+- In-browser <span class="h">near-native</span> execution speed
+- We <span class="h">don’t need</span> to install R.
+- We <span class="h">don’t need</span> to setup a server.
+</div>
+
+<div class="fragment" data-fragment-index="2">
+#### Limitations
+- Not all packages available <span class="h">yet</span>
+- Single <span class="h">core</span> computations
+- Limited local files <span class="h">access</span>
+</div>
+---
+### MAMS webR example
+
+```{webr-r}
+library(MAMS)
+set.seed(2910)
+m1 <- mams(K = 3, J = 1, p = 0.65, p0 = 0.55, r = 1, r0 = 1, 
+           alpha = 0.05, power = 0.9)
+```  
+
+## Documentation with embedded webR
+
+::: {.iframe-container}
+<iframe src="https://tjaki.github.io/MAMS/" style="width: 95%; height: 100%; border: none;"></iframe>
+:::
+
+ 
+## {background-image=bg2.png background-size="100%"}
+
+<span class="question-font">Questions?</span>

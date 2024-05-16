@@ -1,0 +1,109 @@
+
+/*-- scss:defaults --*/
+$question-header-colour: #FF4F31;
+$header-colour: #2E2D62;
+$other-headers-colour: #2E2D62;
+$font-color: #626262;
+$grey-text: #626262;
+$body-bg: #ffffff;
+$body-color: #ffffff;
+$link-color: #00BED5;
+$presentation-heading-color: #000000;
+$code-color: green;
+$text-muted: #656565;
+$code-block-bg: #2c2c2c;
+$code-block-border-color: #000000;
+$font-family-sans-serif: "Slate Pro Condensed", Helvetica, sans-serif !default;
+$font-family-monospace: "Comic Code Ligatures", SFMono-Regular, Menlo, Monaco, Consolas, monospace !default;
+
+/*-- scss:rules --*/
+:root {
+  --r-main-font-size: 24px;
+  --r-main-color: $font-color;
+}
+.reveal ul {
+  --r-main-color: 
+  width:90%;
+}
+
+.reveal li {
+  list-style-type: '\26AB';
+  padding-left: 1rem;
+  
+}
+
+.reveal li::marker {
+  font-size: 1rem;
+}
+
+.h {
+  color: $link-color;
+}
+
+h1 {
+  color: $header-colour !important;
+}
+.hb {
+  color: $link-color;
+  font-weight: 700;
+}
+
+.parenthetical {
+  color: $link-color;
+  font-family: "Comback home", "Slate Pro Condensed", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 100%;
+}
+.grey_text {
+  color: $grey-text;
+}
+
+iframe {
+  border: none;
+  overflow: hidden;
+}
+
+.reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+
+    color: $other-headers-colour;
+}
+
+.question-font {
+    color: #ff4f31;
+    font-family: "Comback home","Slate Pro Condensed",Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    font-size: 5em;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 39%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.iframe-container iframe {
+  width: 100%;
+  height: 80%;
+  border: none;
+}
+
+.reveal .slide > img.stretch.quarto-figure-center, .reveal .slide > img.r-stretch.quarto-figure-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 72% !important;
+    width: 72% !important;
+}
+
+.reveal img, .reveal video, {
+    margin-left: 3em;
+}
+
