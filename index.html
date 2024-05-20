@@ -467,6 +467,7 @@
   .reveal pre div code.qwebr-output-code-stdout, .reveal pre div code.qwebr-output-code-stderr {
     padding: 0;
     display: contents;
+    color: #000000
   }
 
   body.reveal.quarto-light pre div code.qwebr-output-code-stdout {
@@ -528,7 +529,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"options":{"label":"unnamed-chunk-1","comment":"","classes":"","context":"interactive","editor-font-scale":1,"read-only":"false","warning":"true","output":"true","results":"markup","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"out-height":"","out-width":"635px","message":"true","editor-max-height":"","autorun":"false","fig-width":7,"fig-cap":""},"code":"a <- rnorm(50)\na","id":1},{"options":{"label":"unnamed-chunk-2","comment":"","classes":"","context":"interactive","editor-font-scale":1,"read-only":"false","warning":"true","output":"true","results":"markup","editor-quick-suggestions":"false","dpi":72,"fig-height":5,"out-height":"","out-width":"635px","message":"true","editor-max-height":"","autorun":"false","fig-width":7,"fig-cap":""},"code":"library(MAMS)\nset.seed(2910)\nm1 <- mams(K = 3, J = 1, p = 0.65, p0 = 0.55, r = 1, r0 = 1, \n           alpha = 0.05, power = 0.9)","id":2}];
+  globalThis.qwebrCellDetails = [{"options":{"autorun":"false","fig-height":5,"editor-max-height":"","out-height":"","out-width":"635px","fig-cap":"","fig-width":7,"results":"markup","message":"true","label":"unnamed-chunk-1","output":"true","editor-font-scale":1,"comment":"","editor-quick-suggestions":"false","read-only":"false","classes":"","dpi":72,"warning":"true","context":"interactive"},"code":"a <- rnorm(50)\na","id":1}];
 
   </script>
   <script type="module">
@@ -1598,12 +1599,12 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 
 <section>
-<section id="creating-user-friendly-documentation-to-support-software-developement" class="title-slide slide level1 center" data-background-image="bg.png" data-background-size="100%">
-<h1>Creating user-friendly documentation to support software developement</h1>
+<section id="creating-user-friendly-documentation-to-support-software-development" class="title-slide slide level1 center" data-background-image="bg.png" data-background-size="100%">
+<h1>Creating user-friendly documentation to support software development</h1>
 <p><br><br> <span class="grey_text">Nikita Mozgunov</span></p>
 </section>
-<section id="who-is-a-statistical-programmer" class="slide level2">
-<h2>Who is a statistical programmer?</h2>
+<section id="what-does-statistical-programmer-do" class="slide level2">
+<h2>What does Statistical Programmer do?</h2>
 <br><br>
 <h4>
 Key Responsibilities
@@ -1616,21 +1617,26 @@ Key Responsibilities
 <li class="fragment">Knowledge Dissemination (Sharing findings through presentations, publications, and workshops).</li>
 </ul>
 </section>
-<section id="goals" class="slide level2">
-<h2>Goals</h2>
+<section id="section" class="slide level2">
+<h2></h2>
+<br><br> <br><br> <br><br>
+<h2>
+Goals
+</h2>
 <ul>
-<li class="fragment">Current developement<span class="parenthetical"> bringing new functionality.</span></li>
+<li class="fragment">Adding <span class="parenthetical">new functionality</span> to existing packages (e.g.&nbsp;MAMS).</li>
 <li class="fragment">Create web-documentation <span class="parenthetical"> using pkgdown.</span></li>
 <li class="fragment">New approach <span class="parenthetical"> in mastering MAMS R package for end-users.</span></li>
 </ul>
 </section>
 <section id="pkgdown" class="slide level2">
 <h2>pkgdown</h2>
-<p>The <span class="parenthetical">pkgdown</span> generates a static website from an R package’s documentation, making it easier to share and navigate the package’s information and resources.<br> <span class="parenthetical">pkgdown</span> logic:<br></p>
+<p>The <span class="parenthetical">pkgdown</span> generates a static website from an R package’s documentation, making it easier to share and navigate the package’s information and resources.<br> <span class="parenthetical">pkgdown</span> pipeline:<br></p>
 
 <img data-src="pkgdown_logic.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="mams-package-documentation" class="slide level2">
 <h2>MAMS package documentation</h2>
+<p><span style="text-align: right; width:98%;  display: inline-block;"><a href="https://tjaki.github.io/MAMS/">https://tjaki.github.io/MAMS/</a></span></p>
 <div class="iframe-container">
 <iframe src="https://tjaki.github.io/MAMS/" style="width: 95%; height: 100%; border: none;">
 </iframe>
@@ -1665,7 +1671,7 @@ Key Responsibilities
 <h4 id="pros">Pros</h4>
 <ul>
 <li class="fragment">In-browser <span class="h">near-native</span> execution speed</li>
-<li class="fragment">We <span class="h">don’t need</span> to install R.</li>
+<li class="fragment">We <span class="h">don’t need</span> to install R anywhere on the computer.</li>
 <li class="fragment">We <span class="h">don’t need</span> to setup a server.</li>
 </ul>
 </div>
@@ -1673,17 +1679,11 @@ Key Responsibilities
 <!-- -->
 <h4 id="limitations">Limitations</h4>
 <ul>
-<li class="fragment">Not all packages available <span class="h">yet</span></li>
+<li class="fragment">Most of the CRAN packages <span class="h">available</span></li>
 <li class="fragment">Single <span class="h">core</span> computations</li>
 <li class="fragment">Limited local files <span class="h">access</span></li>
 </ul>
 </div>
-</section>
-<section class="slide level2">
-
-<h3 id="mams-webr-example">MAMS webR example</h3>
-<div id="qwebr-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="documentation-with-embedded-webr" class="slide level2">
 <h2>Documentation with embedded webR</h2>
@@ -1692,7 +1692,7 @@ Key Responsibilities
 </iframe>
 </div>
 </section>
-<section id="section" class="slide level2" data-background-image="bg2.png" data-background-size="100%">
+<section id="section-1" class="slide level2" data-background-image="bg2.png" data-background-size="100%">
 <h2></h2>
 <p><span class="question-font">Questions?</span></p>
 <div class="quarto-auto-generated-content">

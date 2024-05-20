@@ -139,6 +139,7 @@ body.quarto-dark .qwebr-button:hover {
 .reveal pre div code.qwebr-output-code-stdout, .reveal pre div code.qwebr-output-code-stderr {
   padding: 0;
   display: contents;
+  color: #000000
 }
 
 body.reveal.quarto-light pre div code.qwebr-output-code-stdout {

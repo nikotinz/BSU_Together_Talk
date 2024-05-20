@@ -16,12 +16,12 @@ webr:
 filters:
   - webr
 ---
-# Creating user-friendly documentation to support software developement {background-image=bg.png background-size="100%"}
+# Creating user-friendly documentation to support software development {background-image=bg.png background-size="100%"}
 </br></br>
 <span class="grey_text">Nikita Mozgunov</span>
 
 
-## Who is a statistical programmer?
+## What does Statistical Programmer do?
 
 
 <br></br>
@@ -33,20 +33,24 @@ filters:
 - Creating ShinyApps to present results.
 - Knowledge Dissemination (Sharing findings through presentations, publications, and workshops).
 
-## Goals
-
-- Current developement<span class="parenthetical"> bringing new functionality.</span>
+## 
+<br></br>
+<br></br>
+<br></br>
+<h2>Goals</h2>
+- Adding <span class="parenthetical">new functionality</span> to existing packages (e.g. MAMS).
 - Create web-documentation <span class="parenthetical"> using pkgdown.</span>
 - New approach <span class="parenthetical"> in mastering MAMS R package for end-users.</span>
 
 ## pkgdown
 
 The <span class="parenthetical">pkgdown</span> generates a static website from an R package's documentation, making it easier to share and navigate the package's information and resources.</br>
-<span class="parenthetical">pkgdown</span> logic:</br>
+<span class="parenthetical">pkgdown</span> pipeline:</br>
 
 ![](pkgdown_logic.png){fig-align="center"}
 
 ## MAMS package documentation 
+<span style="text-align: right; width:98%;  display: inline-block;"><a href="https://tjaki.github.io/MAMS/">https://tjaki.github.io/MAMS/</a></span>
 
 ::: {.iframe-container}
 <iframe src="https://tjaki.github.io/MAMS/" style="width: 95%; height: 100%; border: none;"></iframe>
@@ -83,25 +87,17 @@ WebAssembly provides <span class="h">a way to run code on the web</span> with cl
 <div class="fragment" data-fragment-index="1">
 #### Pros
 - In-browser <span class="h">near-native</span> execution speed
-- We <span class="h">don’t need</span> to install R.
+- We <span class="h">don’t need</span> to install R anywhere on the computer.
 - We <span class="h">don’t need</span> to setup a server.
 </div>
 
 <div class="fragment" data-fragment-index="2">
 #### Limitations
-- Not all packages available <span class="h">yet</span>
+- Most of the CRAN packages <span class="h">available</span>
 - Single <span class="h">core</span> computations
 - Limited local files <span class="h">access</span>
 </div>
 ---
-### MAMS webR example
-
-```{webr-r}
-library(MAMS)
-set.seed(2910)
-m1 <- mams(K = 3, J = 1, p = 0.65, p0 = 0.55, r = 1, r0 = 1, 
-           alpha = 0.05, power = 0.9)
-```  
 
 ## Documentation with embedded webR
 
