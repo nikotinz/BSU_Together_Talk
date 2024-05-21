@@ -30,8 +30,10 @@ filters:
 - Writing efficient and reproducible R scripts.
 - Developing and maintaining packages.
 - Collaboration (Working closely with biostatisticians, researchers).
-- Creating ShinyApps to present results.
-- Knowledge Dissemination (Sharing findings through presentations, publications, and workshops).
+- Knowledge Dissemination:
+  - Creating ShinyApps to present results.
+  - Sharing findings through presentations, publications, and workshops.
+  
 
 ## 
 <br></br>
@@ -57,7 +59,7 @@ The <span class="parenthetical">pkgdown</span> generates a static website from a
 :::
 
 ## Plotly 
-![](CLT.mp4){.absolute left="0" top="50" height="85%" loop="true" autoplay="true"}
+![](CLT.mp4){.absolute left="0" top="50" height="85%" loop="true" autoplay="true" muted="true"}
 
 ## webR
 
