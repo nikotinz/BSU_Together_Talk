@@ -42,7 +42,7 @@ filters:
 <h2>Current Tasks @ESD</h2>
 - Adding <span class="parenthetical">new functionalities</span> to existing packages (e.g. MAMS).
 - Create web-documentation <span class="parenthetical"> using pkgdown.</span>
-- New approach <span class="parenthetical"> in mastering MAMS R package for end-users.</span>
+- New approach <span class="parenthetical"> for mastering MAMS R package for end-users.</span>
 
 ## pkgdown
 
