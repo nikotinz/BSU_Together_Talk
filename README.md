@@ -1,62 +1,17 @@
 # Description
 
-This is a example of the presentation encompassed to the demonstration of the webR technology
+This is an example of a presentation that tries to follow the BSU presentation template with the webR technology demonstration.
 
-# How-to
-This presentation uses revealjs framework inside quarto engine.
-Current stable release version of the Quarto doesn't support webr, but
-pre-release version 1.42xx works fine.
+# How to
+This presentation uses the revealjs framework within the Quarto engine.
+You need to install the latest version of Quarto.
 
-1. Update or check version of the Quarto.
-2. Create new project in RStudio (Quarto web).
-3. Install Quarto extension to support webR.
-details:  https://github.com/coatless/quarto-webr
-4. Create header of a quarto document to setup an output format 
-to revealjs presentation and support webR chunks incorporation.
-E.g. 
+1. Update or check the version of Quarto.
+2. Create a new project in RStudio (Quarto Web).
+3. You can customise the theme of the presentation via css.
+And include it in the header
 ```{markdown}
----
-engine: knitr  
-format: 
-  revealjs:
-    incremental: true
-webr: 
-  show-startup-message: false
-filters:
-  - webr
----
+    Theme: [dark, custom.scss].
 ```
-
-5. Customise the theme of presentation via css.
-You can include into the header
-```{markdown}
-    theme: [dark, custom.scss]
-```
-7. Customise JS editor vie qwebr-styling.css in an "extension" folder.  
-Setup font size and colour, change size of the console output window.
-
-8. Customise JS editor theme via qwebr-monaco-editor-element.js in an "extension" folder.
-E.g.
-```{js}
-require(['vs/editor/editor.main'], function () {
-    editor = monaco.editor.create(editorDiv, {
-      value: initialCode,
-      language: 'r',
-      theme: 'vs-dark',
-      automaticLayout: true,           // Works wonderfully with RevealJS
-      scrollBeyondLastLine: false,
-      minimap: {
-        enabled: false
-      },
-      fontSize: '17.5pt',              // Bootstrap is 1 rem
-      rules:
-        {
-          token: "",
-          foreground: "ff4500",
-          fontStyle: "italic underline",
-        },
-      renderLineHighlight: "none",     // Disable current line highlighting
-      hideCursorInOverviewRuler: true  // Remove cursor indictor in right hand side scroll bar
-    });
-```
-
+4. WebR editor is also customisable, we can set up the view by modifying qwebr-styling.css in an "extension" folder.  
+Set font size and colour, change console output window size.
